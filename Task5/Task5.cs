@@ -1,5 +1,5 @@
 ﻿namespace Task5 {
-	static class Program {
+	static class Task5 {
 		static void Main(string[] args) {
 			int[,] array2D = {
 				{ 1, 2, 3 },

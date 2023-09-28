@@ -46,12 +46,23 @@
 	}
 	static class Program { 
 		static void Main(string[] args) {
-			QuadraticEquation qe = new QuadraticEquation(2, 4, 0);
+			do {
+				try {
+					Console.Write("Enter a, b, c of the quadratic equation (Example: 2 4 6): ");
+					string? input = Console.ReadLine();
+					int[] numbers = Array.ConvertAll(input.Split(" "), s => int.Parse(s));
 
-			Console.WriteLine(
-				$"1st root: {qe[0]}\n" +
-				$"2nd root: {qe[1]}"
-			);
+					QuadraticEquation qe = new QuadraticEquation(numbers[0], numbers[1], numbers[2]);
+
+					Console.WriteLine(
+						$"1st root: {qe[0]}\n" +
+						$"2nd root: {qe[1]}"
+					);
+
+				} catch (Exception ex) {
+					Console.Error.WriteLine(ex.Message);
+				}
+			} while (true);
 		}
 	}
 }

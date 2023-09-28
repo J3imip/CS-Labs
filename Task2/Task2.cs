@@ -15,7 +15,7 @@
 							Console.WriteLine($"Square root of {input} = {result.Value.ToString("F")}\n");
 							break;
 						case -1:
-							throw new Exception("result is negative");
+							throw new Exception("input number must be greater than 0");
 						default:
 							throw new Exception("unable to calculate square root");
 					}
