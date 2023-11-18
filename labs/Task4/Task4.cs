@@ -108,28 +108,35 @@ internal static class Program
 {
     public static void Main()
     {
-        var v1 = new Vector(1, 2, 3);
-        var v2 = new Vector(4, 5, 6);
-        var v3 = new Vector(2, 2, 2);
+        try
+        {
+            var v1 = new Vector(1, 2, 3);
+            var v2 = new Vector(4, 5, 6);
+            var v3 = new Vector(2, 2, 2);
 
-        Console.WriteLine("v1 = " + v1);
-        Console.WriteLine("v2 = " + v2);
-        Console.WriteLine("v3 = " + v3);
+            Console.WriteLine("v1 = " + v1);
+            Console.WriteLine("v2 = " + v2);
+            Console.WriteLine("v3 = " + v3);
 
-        var sum = v1 + v2;
-        Console.WriteLine("Sum: " + sum);
+            var sum = v1 + v2;
+            Console.WriteLine("Sum: " + sum);
 
-        var difference = v1 - v2;
-        Console.WriteLine("Difference: " + difference);
+            var difference = v1 - v2;
+            Console.WriteLine("Difference: " + difference);
 
-        const double scalar = 2.5;
-        var scaled = v1 * scalar;
-        Console.WriteLine("Scaled: " + scaled);
+            const double scalar = 2.5;
+            var scaled = v1 * scalar;
+            Console.WriteLine("Scaled: " + scaled);
 
-        var dotProduct = v1 * v2;
-        Console.WriteLine("Dot Product: " + dotProduct);
+            var dotProduct = v1 * v2;
+            Console.WriteLine("Dot Product: " + dotProduct);
 
-        var divided = v1 / scalar;
-        Console.WriteLine("Divided: " + divided);
+            var divided = v1 / scalar;
+            Console.WriteLine("Divided: " + divided);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 }

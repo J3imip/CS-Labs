@@ -69,5 +69,6 @@ internal static class Program
         // Implicit cast
         string complexString = complex1;
         Console.WriteLine($"Complex as string: {complexString}");
+        Console.WriteLine($"{complex2}");
     }
 }

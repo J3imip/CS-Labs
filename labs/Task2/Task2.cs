@@ -15,7 +15,9 @@ internal static class Program
 {
     private static void Main(string[] args)
     {
-        const string se = "the    hardest     program   in    the    world";
-        Console.WriteLine(se.RemoveExtraSpaces());
+        Console.Write("Enter string to process: ");
+        var input = Console.ReadLine();
+        Console.Write("Result: ");
+        Console.WriteLine(input.RemoveExtraSpaces());
     }
 }
